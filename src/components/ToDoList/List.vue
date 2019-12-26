@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul class="list">
     <li v-for="toDo in toDos" :key="toDo.key">
       <input type="checkbox" @change="completeToDo(toDo.key);">
       {{ toDo.toDo }}
