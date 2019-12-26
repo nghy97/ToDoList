@@ -1,6 +1,6 @@
 <template>
   <div>
     <hr>
-    <div>ehdgur920907@gmail.com</div>
+    <a @click.prevent href="mailto:ehdgur920907@gmail.com">Send mail</a>
   </div>
 </template>
