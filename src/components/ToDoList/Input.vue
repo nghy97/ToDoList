@@ -1,7 +1,7 @@
 <template>
   <div>
-    <input type="text" v-model="toDo">
-    <button @click="addToDo(toDo); resetToDo();">추가</button>
+    <input @keyup.enter="resetToDo()" type="text" v-model="toDo">
+    <button @click="resetToDo()">추가</button>
   </div>
 </template>
 
@@ -15,6 +15,7 @@ export default {
   },
   methods: {
     resetToDo() {
+      this.addToDo(this.toDo);
       this.toDo = "";
     }
   }
