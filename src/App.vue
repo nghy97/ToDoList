@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <Input/>
+    <Input :addToDo="addToDo"/>
     <ToDos/>
     <Footer/>
   </div>
@@ -20,6 +20,21 @@ export default {
     Input,
     ToDos,
     Footer
+  },
+  data() {
+    return {
+      toDos: []
+    };
+  },
+  methods: {
+    addToDo(toDo) {
+      if (toDo) {
+        this.toDos.push({
+          toDo,
+          key: new Date().getTime()
+        });
+      }
+    }
   }
 };
 </script>

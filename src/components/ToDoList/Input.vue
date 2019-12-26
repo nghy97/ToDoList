@@ -1,22 +1,19 @@
 <template>
   <div>
     <input type="text" v-model="toDo">
-    <button @click="addToDo">추가</button>
+    <button @click="addToDo(toDo); resetToDo();">추가</button>
   </div>
 </template>
 
 <script>
 export default {
+  props: ["addToDo"],
   data() {
     return {
       toDo: ""
     };
   },
   methods: {
-    addToDo() {
-      alert(this.toDo);
-      this.resetToDo();
-    },
     resetToDo() {
       this.toDo = "";
     }
