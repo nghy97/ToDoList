@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header/>
+    <!-- v-bind:addToDo === :addToDo -->
     <Input :addToDo="addToDo"/>
     <List :toDos="toDos" :removeToDo="removeToDo" :completeToDo="completeToDo"/>
     <Footer/>
