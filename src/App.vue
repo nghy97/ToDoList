@@ -1,5 +1,10 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <Header/>
+    <Input/>
+    <ToDos/>
+    <Footer/>
+  </div>
 </template>
 
 <script>
