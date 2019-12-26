@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      toDos: []
+      toDos: [{ toDo: "sample", key: new Date().getTime(), completed: false }]
     };
   },
   methods: {
