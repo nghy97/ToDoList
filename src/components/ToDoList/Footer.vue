@@ -1,5 +1,8 @@
 <template>
-  <div>Footer</div>
+  <div>
+    <hr>
+    <div>ehdgur920907@gmail.com</div>
+  </div>
 </template>
 
 <script>
