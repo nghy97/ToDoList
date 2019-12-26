@@ -3,7 +3,7 @@
     <li v-for="toDo in toDos" :key="toDo.key">
       <input type="checkbox" @change="completeToDo(toDo.key);">
       {{ toDo.toDo }}
-      <button v-on:click="removeToDo(toDo.key)">삭제</button>
+      <button @click="removeToDo(toDo.key)">삭제</button>
     </li>
   </ul>
 </template>
@@ -15,4 +15,11 @@ export default {
 </script>
 
 <style>
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
 </style>

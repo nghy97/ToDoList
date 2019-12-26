@@ -2,7 +2,7 @@
   <div id="app">
     <Header/>
     <Input :addToDo="addToDo"/>
-    <ToDos :toDos="toDos" :removeToDo="removeToDo" :completeToDo="completeToDo"/>
+    <List :toDos="toDos" :removeToDo="removeToDo" :completeToDo="completeToDo"/>
     <Footer/>
   </div>
 </template>
@@ -10,7 +10,7 @@
 <script>
 import Header from "./components/ToDoList/Header";
 import Input from "./components/ToDoList/Input";
-import ToDos from "./components/ToDoList/ToDos";
+import List from "./components/ToDoList/List";
 import Footer from "./components/ToDoList/Footer";
 
 export default {
@@ -18,7 +18,7 @@ export default {
   components: {
     Header,
     Input,
-    ToDos,
+    List,
     Footer
   },
   data() {
