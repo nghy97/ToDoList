@@ -2,7 +2,7 @@
   <div id="app">
     <Header/>
     <Input :addToDo="addToDo"/>
-    <ToDos :toDos="toDos" :removeToDo="removeToDo"/>
+    <ToDos :toDos="toDos" :removeToDo="removeToDo" :completeToDo="completeToDo"/>
     <Footer/>
   </div>
 </template>
@@ -38,6 +38,15 @@ export default {
     },
     removeToDo(key) {
       this.toDos = this.toDos.filter(toDo => toDo.key !== key);
+    },
+    completeToDo(key) {
+      this.toDos = this.toDos.map(toDo => {
+        if (toDo.key === key) {
+          return { ...toDo, completed: !toDo.completed };
+        }
+
+        return toDo;
+      });
     }
   }
 };
