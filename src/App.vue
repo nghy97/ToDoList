@@ -2,7 +2,7 @@
   <div id="app">
     <Header/>
     <Input :addToDo="addToDo"/>
-    <ToDos/>
+    <ToDos :toDos="toDos" :removeToDo="removeToDo"/>
     <Footer/>
   </div>
 </template>
@@ -31,9 +31,13 @@ export default {
       if (toDo) {
         this.toDos.push({
           toDo,
-          key: new Date().getTime()
+          key: new Date().getTime(),
+          completed: false
         });
       }
+    },
+    removeToDo(key) {
+      this.toDos = this.toDos.filter(toDo => toDo.key !== key);
     }
   }
 };
