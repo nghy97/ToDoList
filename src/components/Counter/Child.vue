@@ -1,9 +1,3 @@
 <template>
-  <div>
-    <hr>
-    Child: {{ $store.state.count }}
-    <br>
-    <button>+</button>
-    <button>-</button>
-  </div>
+  <div>Child: {{ $store.state.count }}</div>
 </template>
