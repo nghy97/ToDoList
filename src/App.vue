@@ -1,9 +1,6 @@
 <template>
   <div id="app">
     <ToDoList/>
-    <br>
-    <br>
-    <br>
     <Counter/>
   </div>
 </template>
