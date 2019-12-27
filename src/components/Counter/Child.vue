@@ -1,7 +1,7 @@
 <template>
   <div>
     <hr>
-    Child: {{ count }}
+    Child: {{ $store.state.count }}
     <br>
     <button>+</button>
     <button>-</button>
