@@ -7,9 +7,3 @@
     <button>-</button>
   </div>
 </template>
-
-<script>
-export default {
-  props: ["count"]
-};
-</script>
