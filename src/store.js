@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import axios from 'axios';
+// import axios from 'axios';
 
 Vue.config.productionTip = false;
 Vue.use(Vuex);
@@ -11,22 +11,20 @@ export const store = new Vuex.Store({
     count: 0,
   },
   getters: {
-    getDoubleCount(state) {
-      state.count *= 2;
+    getCount(state) {
       return state.count;
     },
   },
   mutations: {
     syncIncrement(state, payload) {
-      state.count = payload;
+      state.count += payload;
     },
   },
   actions: {
     asyncIncrement: function(context, payload) {
-      alert(payload);
-      return axios.get('api', function(res) {
-        context.commit('increment', res);
-      });
+      return setTimeout(() => {
+        context.commit('syncIncrement', payload);
+      }, 2000);
     },
   },
 });

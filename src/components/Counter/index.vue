@@ -1,9 +1,10 @@
 <template>
   <div id="counter">
     <h1>Counter</h1>
-    Parent: {{ getDoubleCount }}
+    sync: {{ getCount }}
+    <button @click="syncIncrement(2);">add</button>
     <br>
-    <Child/>
+    <Child :getCount="getCount" :asyncIncrement="asyncIncrement"/>
   </div>
 </template>
 
@@ -16,12 +17,12 @@ export default {
   name: "counter",
   components: { Child },
   computed: {
-    // this.$store.getters.getDoubleCount;
-    ...mapGetters(["getDoubleCount"])
+    // this.$store.getters.getCount;
+    ...mapGetters(["getCount"])
   },
   methods: {
     // this.$store.commit("addCount", 10);
-    ...mapMutations(["addCount"]),
+    ...mapMutations(["syncIncrement"]),
     ...mapActions(["asyncIncrement"])
   }
 };
