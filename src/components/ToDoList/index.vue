@@ -1,10 +1,10 @@
 <template>
   <div id="to-do-list">
-    <Header/>
+    <Header />
     <!-- v-bind:addToDo === :addToDo -->
-    <Input :addToDo="addToDo"/>
-    <List :toDos="toDos" :removeToDo="removeToDo" :completeToDo="completeToDo"/>
-    <Footer/>
+    <Input :addToDo="addToDo" />
+    <List :toDos="toDos" :removeToDo="removeToDo" :completeToDo="completeToDo" />
+    <Footer />
   </div>
 </template>
 
