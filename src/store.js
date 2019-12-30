@@ -18,7 +18,6 @@ export const store = new Vuex.Store({
   mutations: {
     syncIncrement(state, payload) {
       state.count += payload;
-      console.log(state);
     },
   },
   actions: {
