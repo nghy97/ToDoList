@@ -9,22 +9,22 @@
 </template>
 
 <script>
-import Header from "./Header";
-import Input from "./Input";
-import List from "./List";
-import Footer from "./Footer";
+import Header from './Header';
+import Input from './Input';
+import List from './List';
+import Footer from './Footer';
 
 export default {
-  name: "to-do-list",
+  name: 'to-do-list',
   components: {
     Header,
     Input,
     List,
-    Footer
+    Footer,
   },
   data() {
     return {
-      toDos: [{ toDo: "sample", key: new Date().getTime(), completed: false }]
+      toDos: [{ toDo: 'sample', key: new Date().getTime(), completed: false }],
     };
   },
   methods: {
@@ -33,7 +33,7 @@ export default {
         this.toDos.push({
           toDo,
           key: new Date().getTime(),
-          completed: false
+          completed: false,
         });
       }
     },
@@ -48,8 +48,7 @@ export default {
 
         return toDo;
       });
-    }
-  }
+    },
+  },
 };
 </script>
-

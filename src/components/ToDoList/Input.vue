@@ -7,20 +7,19 @@
 
 <script>
 export default {
-  props: ["addToDo"],
+  props: ['addToDo'],
   data() {
     return {
-      toDo: ""
+      toDo: '',
     };
   },
   methods: {
     resetToDo() {
       this.addToDo(this.toDo);
-      this.toDo = "";
-    }
-  }
+      this.toDo = '';
+    },
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>

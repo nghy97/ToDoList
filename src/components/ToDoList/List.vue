@@ -1,7 +1,7 @@
 <template>
   <ul class="list">
     <li v-for="toDo in toDos" :key="toDo.key">
-      <input type="checkbox" @change="completeToDo(toDo.key);" />
+      <input type="checkbox" @change="completeToDo(toDo.key)" />
       {{ toDo.toDo }}
       <button @click="removeToDo(toDo.key)">삭제</button>
     </li>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  props: ["toDos", "removeToDo", "completeToDo"]
+  props: ['toDos', 'removeToDo', 'completeToDo'],
 };
 </script>
 
