@@ -1,7 +1,7 @@
 <template>
   <div>
     async: {{ getCount }}
-    <button @click="asyncIncrement(1)">add</button>
+    <button @click="asyncIncrement()">add</button>
   </div>
 </template>
 
