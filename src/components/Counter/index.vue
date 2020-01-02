@@ -2,7 +2,7 @@
   <div id="counter">
     <h1>Counter</h1>
     sync: {{ getCount }}
-    <button @click="syncIncrement(2)">add</button>
+    <button @click="syncIncrement(1)">add</button>
     <br />
     <Child :getCount="getCount" :asyncIncrement="asyncIncrement" />
   </div>
@@ -23,6 +23,7 @@ export default {
   methods: {
     // this.$store.commit("addCount", 10);
     ...mapMutations(['syncIncrement']),
+    // this.$store.dispatch('asyncIncrement');
     ...mapActions(['asyncIncrement']),
   },
 };

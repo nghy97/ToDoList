@@ -6,6 +6,14 @@ import Vuex from 'vuex';
 Vue.config.productionTip = false;
 Vue.use(Vuex);
 
+function getAsyncData() {
+  return new Promise(function (resolve) {
+    setTimeout(() => {
+      resolve(1);
+    }, 2000);
+  });
+}
+
 export const store = new Vuex.Store({
   state: {
     count: 0,
@@ -21,10 +29,9 @@ export const store = new Vuex.Store({
     },
   },
   actions: {
-    asyncIncrement: function(context, payload) {
-      return setTimeout(() => {
-        context.commit('syncIncrement', payload);
-      }, 2000);
+    async asyncIncrement(context) {
+      const data = await getAsyncData();
+      context.commit('syncIncrement', data);
     },
   },
 });
