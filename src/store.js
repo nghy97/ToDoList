@@ -20,11 +20,11 @@ async function getAsync() {
 
     return age;
   } catch (error) {
-    return 3;
+    return 4;
   }
 }
 
-export const store = new Vuex.Store({
+const store = new Vuex.Store({
   state: {
     count: 0,
   },
@@ -45,3 +45,5 @@ export const store = new Vuex.Store({
     },
   },
 });
+
+export default store;
