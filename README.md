@@ -1,29 +1,3 @@
 # App
 
-## Project setup
-
-```Shell
-npm install
-```
-
-### Compiles and hot-reloads for development
-
-```Shell
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```Shell
-npm run build
-```
-
-### Lints and fixes files
-
-```Shell
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Vue.js를 연습하기 위한 나만의 공간
