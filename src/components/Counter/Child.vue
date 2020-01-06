@@ -11,13 +11,13 @@
 export default {
   props: {
     getCount: {
-      type: Function,
-      default: () => 0,
+      type: Number,
+      default: 0
     },
     asyncIncrement: {
       type: Function,
-      default: () => false,
-    },
-  },
+      default: () => false
+    }
+  }
 };
 </script>
