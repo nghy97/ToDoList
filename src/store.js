@@ -1,17 +1,27 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-// import axios from 'axios';
+import axios from 'axios';
 
 Vue.config.productionTip = false;
 Vue.use(Vuex);
 
-function getAsyncData() {
-  return new Promise(function (resolve) {
-    setTimeout(() => {
-      resolve(1);
-    }, 2000);
-  });
+// function isEmptyObject(object) {
+//   return Object.keys(object).length === 0;
+// }
+
+async function getAsync() {
+  try {
+    const { data } = await axios.get('https://randomuser.me/api');
+    const [results] = data.results;
+    const {
+      registered: { age },
+    } = results;
+
+    return age;
+  } catch (error) {
+    return 3;
+  }
 }
 
 export const store = new Vuex.Store({
@@ -30,7 +40,7 @@ export const store = new Vuex.Store({
   },
   actions: {
     async asyncIncrement(context) {
-      const data = await getAsyncData();
+      const data = await getAsync();
       context.commit('syncIncrement', data);
     },
   },
