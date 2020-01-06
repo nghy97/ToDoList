@@ -28,6 +28,7 @@ export const store = new Vuex.Store({
   state: {
     count: 0,
   },
+  // computed처럼 캐싱이 가능하다.
   getters: {
     getCount(state) {
       return state.count;
@@ -40,8 +41,7 @@ export const store = new Vuex.Store({
   },
   actions: {
     async asyncIncrement(context) {
-      const data = await getAsync();
-      context.commit('syncIncrement', data);
+      context.commit('syncIncrement', await getAsync());
     },
   },
 });

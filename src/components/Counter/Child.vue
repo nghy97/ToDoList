@@ -12,12 +12,12 @@ export default {
   props: {
     getCount: {
       type: Number,
-      default: 0
+      default: 0,
     },
     asyncIncrement: {
       type: Function,
-      default: () => false
-    }
-  }
+      default: () => false,
+    },
+  },
 };
 </script>

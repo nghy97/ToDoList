@@ -12,7 +12,7 @@
 <script>
 export default {
   data: () => ({
-    isVisible: true
-  })
+    isVisible: true,
+  }),
 };
 </script>
