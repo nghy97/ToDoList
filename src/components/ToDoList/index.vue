@@ -2,25 +2,24 @@
   <div id="to-do-list">
     <Header />
     <!-- v-bind:addToDo === :addToDo -->
-    <Input :addToDo="addToDo" />
-    <List :toDos="toDos" :removeToDo="removeToDo" :completeToDo="completeToDo" />
+    <Input :add-to-do="addToDo" />
+    <List
+      :to-dos="toDos"
+      :remove-to-do="removeToDo"
+      :complete-to-do="completeToDo"
+    />
     <Footer />
   </div>
 </template>
 
 <script>
-import Header from './Header';
-import Input from './Input';
-import List from './List';
-import Footer from './Footer';
-
 export default {
-  name: 'to-do-list',
+  name: 'ToDoList',
   components: {
-    Header,
-    Input,
-    List,
-    Footer,
+    Header: () => import('./Header'),
+    Input: () => import('./Input'),
+    List: () => import('./List'),
+    Footer: () => import('./Footer'),
   },
   data() {
     return {

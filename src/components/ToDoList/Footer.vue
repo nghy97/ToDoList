@@ -1,6 +1,9 @@
 <template>
   <footer>
-    <hr />
-    <a @click.prevent href="mailto:ehdgur920907@gmail.com">Send mail</a>
+    <hr>
+    <a
+      href="mailto:ehdgur920907@gmail.com"
+      @click.prevent
+    >Send mail</a>
   </footer>
 </template>

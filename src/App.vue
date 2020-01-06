@@ -6,14 +6,11 @@
 </template>
 
 <script>
-import ToDoList from './components/ToDoList';
-import Counter from './components/Counter';
-
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    ToDoList,
-    Counter,
+    ToDoList: () => import('./components/ToDoList'),
+    Counter: () => import('./components/Counter'),
   },
 };
 </script>
