@@ -34,7 +34,8 @@
     ],
     "rules": {
       "no-console": "warn",
-      "comma-dangle": ["error", "always-multiline"]
+      "comma-dangle": ["error", "always-multiline"],
+      "semi": ["error", "always"]
     },
     "parserOptions": {
       "parser": "babel-eslint"
