@@ -1,7 +1,11 @@
 <template>
 	<ul class="list">
-		<li v-for="toDo in toDos" :key="toDo.key">
-			<input type="checkbox" @change="completeToDo(toDo.key)" />
+		<li
+			:class="{ 'line-through': toDo.completed }"
+			v-for="toDo in toDos"
+			:key="toDo.key"
+		>
+			<input style="" type="checkbox" @change="completeToDo(toDo.key)" />
 			{{ toDo.toDo }}
 			<button @click="removeToDo(toDo.key)">
 				삭제
@@ -36,5 +40,9 @@ ul {
 
 li {
 	list-style: none;
+}
+
+.line-through {
+	text-decoration: line-through;
 }
 </style>
