@@ -25,45 +25,6 @@
     "eslint-plugin-vue": "^5.2.3",
     "vue-template-compiler": "^2.6.10"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:vue/essential",
-      "prettier",
-      "plugin:prettier/recommended"
-    ],
-    "plugins": ["prettier"],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "semi": true,
-          "useTabs": true,
-          "tabWidth": 2,
-          "trailingComma": "all",
-          "printWidth": 80,
-          "bracketSpacing": true,
-          "arrowParens": "avoid"
-        }
-      ]
-    },
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "babel": {
-    "presets": [
-      "@vue/cli-plugin-babel/preset"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-optional-chaining"
-    ]
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions"
