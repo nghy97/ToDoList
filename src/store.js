@@ -11,39 +11,39 @@ Vue.use(Vuex);
 // }
 
 async function getAsync() {
-  try {
-    const { data } = await axios.get('https://randomuser.me/api');
-    const [results] = data.results;
-    const {
-      registered: { age },
-    } = results;
+	try {
+		const { data } = await axios.get('https://randomuser.me/api');
+		const [results] = data.results;
+		const {
+			registered: { age },
+		} = results;
 
-    return age;
-  } catch (error) {
-    return 4;
-  }
+		return age;
+	} catch (error) {
+		return 4;
+	}
 }
 
 const store = new Vuex.Store({
-  state: {
-    count: 0,
-  },
-  // computed처럼 캐싱이 가능하다.
-  getters: {
-    getCount(state) {
-      return state.count;
-    },
-  },
-  mutations: {
-    syncIncrement(state, payload) {
-      state.count += payload;
-    },
-  },
-  actions: {
-    async asyncIncrement(context) {
-      context.commit('syncIncrement', await getAsync());
-    },
-  },
+	state: {
+		count: 0,
+	},
+	// computed처럼 캐싱이 가능하다.
+	getters: {
+		getCount(state) {
+			return state.count;
+		},
+	},
+	mutations: {
+		syncIncrement(state, payload) {
+			state.count += payload;
+		},
+	},
+	actions: {
+		async asyncIncrement(context) {
+			context.commit('syncIncrement', await getAsync());
+		},
+	},
 });
 
 export default store;
